@@ -1,0 +1,528 @@
+:root {
+    --cream: #f5f7ef;
+    --white: #fffefa;
+    --green: #315b45;
+    --green-dark: #244534;
+    --orange: #e39a58;
+    --ink: #26352b;
+    --muted: #657267;
+    --line: #e3e8dd;
+    font-family: "DM Sans", sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--orange);
+    outline-offset: 4px;
+}
+
+.site-header,
+.section-wrap,
+.site-footer {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.site-header {
+    display: flex;
+    min-height: 82px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--green);
+    font-family: "Nunito", sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.logo-icon {
+    color: var(--orange);
+    font-size: 25px;
+}
+
+.site-header nav {
+    display: flex;
+    gap: 32px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.site-header nav a:hover,
+.back-to-top:hover {
+    color: var(--green);
+}
+
+.hero {
+    position: relative;
+    display: grid;
+    width: min(1120px, calc(100% - 48px));
+    min-height: 560px;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 55px;
+    margin: 0 auto;
+    padding: 60px 0 75px;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    margin: 0 0 13px;
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Nunito", sans-serif;
+}
+
+.hero h1 {
+    margin-bottom: 17px;
+    font-size: clamp(48px, 6.5vw, 76px);
+    font-weight: 800;
+    letter-spacing: -2.5px;
+    line-height: 1.02;
+}
+
+.hero h1 span,
+.habitats-inner h2 span,
+.about-section h2 span {
+    color: var(--green);
+}
+
+.hero-text {
+    max-width: 390px;
+    margin-bottom: 25px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.button {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    gap: 22px;
+    padding: 0 19px;
+    border-radius: 6px;
+    background: var(--green);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 160ms ease, transform 160ms ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background: var(--green-dark);
+}
+
+.hero-picture {
+    position: relative;
+    height: 390px;
+    overflow: hidden;
+    border-radius: 48% 48% 12px 12px;
+    background: #dce4d2;
+}
+
+.hero-picture img,
+.animal-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.picture-note {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background: var(--white);
+    color: var(--green);
+    font-family: "Nunito", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    transform: rotate(-4deg);
+}
+
+.hero-decoration {
+    position: absolute;
+    right: -38px;
+    bottom: 42px;
+    color: #e9bf87;
+    font-size: 95px;
+}
+
+.animals-section {
+    padding-top: 74px;
+    padding-bottom: 96px;
+    border-top: 1px solid var(--line);
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.section-heading h2,
+.habitats-inner h2,
+.about-section h2 {
+    margin-bottom: 0;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+}
+
+.section-heading > p {
+    max-width: 320px;
+    margin-bottom: 3px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 19px;
+}
+
+.animal-card {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--white);
+}
+
+.animal-card > img {
+    height: 190px;
+    background: #e4eadf;
+}
+
+.card-content {
+    padding: 17px;
+}
+
+.animal-type {
+    color: var(--green);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.animal-card h3 {
+    margin: 7px 0 5px;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.animal-card .card-content > p:not(.animal-fact) {
+    min-height: 44px;
+    margin-bottom: 14px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.fact-button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 0;
+    border: 0;
+    border-top: 1px solid var(--line);
+    background: transparent;
+    color: var(--green);
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.fact-button span {
+    color: var(--orange);
+    font-size: 18px;
+}
+
+.animal-fact {
+    margin: 11px 0 0;
+    padding: 10px;
+    border-radius: 6px;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.habitats-section {
+    background: #e9efe4;
+}
+
+.habitats-inner {
+    display: grid;
+    min-height: 310px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.habitat-list p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 16px 0;
+    border-bottom: 1px solid #d7e1d1;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.habitat-list p:first-child {
+    border-top: 1px solid #d7e1d1;
+}
+
+.habitat-list p > span {
+    width: 28px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.habitat-list strong {
+    color: var(--ink);
+}
+
+.about-section {
+    display: grid;
+    min-height: 320px;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    gap: 40px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.about-icon {
+    display: grid;
+    width: 130px;
+    height: 130px;
+    place-items: center;
+    border-radius: 50%;
+    background: #f3e2ca;
+    color: #bd7950;
+    font-size: 58px;
+}
+
+.about-section h2 {
+    margin-bottom: 13px;
+}
+
+.about-section > div:last-child > p:last-child {
+    max-width: 580px;
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.site-footer {
+    display: flex;
+    min-height: 85px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    border-top: 1px solid var(--line);
+}
+
+.site-footer p,
+.back-to-top {
+    margin: 0;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.back-to-top {
+    font-weight: 700;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        gap: 30px;
+    }
+
+    .animal-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .animal-card > img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header,
+    .section-wrap,
+    .site-footer,
+    .hero {
+        width: calc(100% - 36px);
+    }
+
+    .site-header {
+        min-height: 70px;
+    }
+
+    .site-header nav {
+        gap: 14px;
+        font-size: 11px;
+    }
+
+    .site-header nav a:first-child {
+        display: none;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 55px 0 65px;
+    }
+
+    .hero h1 {
+        font-size: clamp(50px, 14vw, 68px);
+    }
+
+    .hero-picture {
+        height: 310px;
+    }
+
+    .hero-decoration {
+        right: 0;
+        bottom: 20px;
+        font-size: 65px;
+    }
+
+    .animals-section {
+        padding-top: 55px;
+        padding-bottom: 65px;
+    }
+
+    .section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .animal-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .animal-card > img {
+        height: 240px;
+    }
+
+    .habitats-inner {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .about-icon {
+        width: 90px;
+        height: 90px;
+        font-size: 42px;
+    }
+
+    .site-footer {
+        min-height: 90px;
+        flex-wrap: wrap;
+        padding: 16px 0;
+    }
+
+    .site-footer p {
+        order: 1;
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}

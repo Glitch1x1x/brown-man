@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet amazing animals and learn a few fun facts about the natural world.">
+    <meta name="theme-color" content="#f5f7ef">
+    <title>Wild World — Amazing Animals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="#home" aria-label="Wild World home">
+            <span class="logo-icon" aria-hidden="true">✿</span>
+            <span>Wild World</span>
+        </a>
+        <nav aria-label="Main navigation">
+            <a href="#animals">Meet the animals</a>
+            <a href="#habitats">Habitats</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow">A LITTLE GUIDE TO THE BIG WIDE WORLD</p>
+                <h1>Our world is<br>full of <span>wonder.</span></h1>
+                <p class="hero-text">From the tallest trees to the deepest oceans, meet some amazing animals and discover what makes each one special.</p>
+                <a class="button" href="#animals">Meet the animals <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-picture">
+                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=85" alt="A lion resting in the grass">
+                <span class="picture-note">Hello, wild one!</span>
+            </div>
+            <div class="hero-decoration" aria-hidden="true">✳</div>
+        </section>
+
+        <section class="animals-section section-wrap" id="animals">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">SAY HELLO</p>
+                    <h2>Meet a few friends</h2>
+                </div>
+                <p>Every animal has its own special skills. Pick a card to learn a fun fact!</p>
+            </div>
+
+            <div class="animal-grid">
+                <article class="animal-card">
+                    <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=850&q=80" alt="A lion sitting in the grass">
+                    <div class="card-content">
+                        <span class="animal-type">MAMMAL · GRASSLAND</span>
+                        <h3>Lion</h3>
+                        <p>Lions are big cats that live in groups called prides.</p>
+                        <button class="fact-button" type="button" aria-expanded="false" aria-controls="fact-lion">Show a fun fact <span aria-hidden="true">+</span></button>
+                        <p class="animal-fact" id="fact-lion" hidden>A lion's roar can be heard from several kilometres away.</p>
+                    </div>
+                </article>
+
+                <article class="animal-card">
+                    <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=850&q=80" alt="An elephant walking through the savanna">
+                    <div class="card-content">
+                        <span class="animal-type">MAMMAL · SAVANNA</span>
+                        <h3>Elephant</h3>
+                        <p>Elephants use their trunks to smell, drink, and pick things up.</p>
+                        <button class="fact-button" type="button" aria-expanded="false" aria-controls="fact-elephant">Show a fun fact <span aria-hidden="true">+</span></button>
+                        <p class="animal-fact" id="fact-elephant" hidden>Elephants communicate with sounds that can travel long distances.</p>
+                    </div>
+                </article>
+
+                <article class="animal-card">
+                    <img src="https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&fit=crop&w=850&q=80" alt="A dolphin swimming underwater">
+                    <div class="card-content">
+                        <span class="animal-type">MAMMAL · OCEAN</span>
+                        <h3>Dolphin</h3>
+                        <p>Dolphins are clever ocean mammals that breathe air.</p>
+                        <button class="fact-button" type="button" aria-expanded="false" aria-controls="fact-dolphin">Show a fun fact <span aria-hidden="true">+</span></button>
+                        <p class="animal-fact" id="fact-dolphin" hidden>Dolphins use clicks and whistles to communicate with one another.</p>
+                    </div>
+                </article>
+
+                <article class="animal-card">
+                    <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=850&q=80" alt="A colourful parrot perched on a branch">
+                    <div class="card-content">
+                        <span class="animal-type">BIRD · TROPICAL FOREST</span>
+                        <h3>Parrot</h3>
+                        <p>Parrots use strong beaks to crack seeds and nuts.</p>
+                        <button class="fact-button" type="button" aria-expanded="false" aria-controls="fact-parrot">Show a fun fact <span aria-hidden="true">+</span></button>
+                        <p class="animal-fact" id="fact-parrot" hidden>Some parrots can copy sounds they hear around them.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="habitats-section" id="habitats">
+            <div class="section-wrap habitats-inner">
+                <div>
+                    <p class="eyebrow">HOME, SWEET HABITAT</p>
+                    <h2>Different homes,<br><span>one shared planet.</span></h2>
+                </div>
+                <div class="habitat-list">
+                    <p><span aria-hidden="true">🌳</span><strong>Forest</strong> — trees, plants, and busy wildlife.</p>
+                    <p><span aria-hidden="true">☀</span><strong>Grassland</strong> — wide open spaces for grazing and roaming.</p>
+                    <p><span aria-hidden="true">🌊</span><strong>Ocean</strong> — a huge underwater home full of life.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section section-wrap" id="about">
+            <div class="about-icon" aria-hidden="true">♡</div>
+            <div>
+                <p class="eyebrow">KINDNESS COUNTS</p>
+                <h2>Be curious.<br><span>Be kind to nature.</span></h2>
+                <p>Animals need clean water, safe places to live, and people who care. Learning about them is a lovely first step toward protecting our planet.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="logo" href="#home"><span class="logo-icon" aria-hidden="true">✿</span><span>Wild World</span></a>
+        <p>Keep exploring and be kind to every creature.</p>
+        <a class="back-to-top" href="#home">Back to top ↑</a>
+    </footer>
+</body>
+</html>
